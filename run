@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# These environment variables are sometimes needed by the running daemons
+export USER=minoxo
+export HOME=/home/minoxo
+
+# Include the user-specific profile
+source $HOME/.bash_profile
+
+# Now let's go!
+exec /usr/local/bin/node /home/minoxo/etc/webservice-61000-demo/server.js 2>&1
